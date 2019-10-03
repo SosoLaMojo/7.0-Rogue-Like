@@ -1,9 +1,9 @@
 #pragma once
 
-struct Global
+struct Ressource
 {
-	char walls_ = '#';
-	char rocks_ = '^';
+	char walls = '#';
+	char rocks = '^';
 
 	
 };

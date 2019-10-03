@@ -13,16 +13,19 @@ Map::Map()
 			map[i][j] = '.';
 		}
 	}
+
+	const Ressource ressources;
+	
 	for (int i = 0; i < 20; i++)
 	{
-		map[i][69] = walls_;
-		map[i][0] = walls_;
+		map[i][69] = ressources.walls;
+		map[i][0] = ressources.walls;
 
 	}
 	for (int i = 0; i < 70; i++)
 	{
-		map[0][i] = walls_;
-		map[19][i] = walls_;
+		map[0][i] = ressources.walls;
+		map[19][i] = ressources.walls;
 	}
 }
 
