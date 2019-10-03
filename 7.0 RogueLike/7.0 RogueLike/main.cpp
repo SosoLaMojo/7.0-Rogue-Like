@@ -1,4 +1,7 @@
 #include<iostream>
+#include "player.h"
+#include "ennemy.h"
+#include "map.h"
 
 /* EXERCICE 7.0 ROGUE LIKE
 Créer un jeu dans le style roguelike.
@@ -16,8 +19,26 @@ N’oubliez pas de faire quelque chose de fun et amusez-vous en le faisant.
 
 int main() {
 
+	Player player = Player(100, '@');
+	Ennemy ennemy = Ennemy(20, '&');
+	Map map = Map();
 
+	map.Print();
+	
+	
+	//void ShowMap()
+	//{
+	//	for (int i = 0; i < dungeon.size(); i++)
+	//	{
+	//		for (int j = 0; j < dungeon[i].size(); j++)
+	//		{
 
+	//			std::cout << dungeon[i][j];
+	//		}
+	//		std::cout << "\n";
+
+	//	}
+	//}
 
 	system("pause");
 	return EXIT_SUCCESS;

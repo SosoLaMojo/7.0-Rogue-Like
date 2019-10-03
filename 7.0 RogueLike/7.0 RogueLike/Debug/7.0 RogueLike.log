@@ -1,0 +1,6 @@
+﻿  map.cpp
+C:\git 3\7.0-Rogue-Like\7.0 RogueLike\7.0 RogueLike\map.cpp(9,20): warning C4018:  '<' : incompatibilité signed/unsigned
+C:\git 3\7.0-Rogue-Like\7.0 RogueLike\7.0 RogueLike\map.cpp(11,21): warning C4018:  '<' : incompatibilité signed/unsigned
+C:\git 3\7.0-Rogue-Like\7.0 RogueLike\7.0 RogueLike\map.cpp(31,20): warning C4018:  '<' : incompatibilité signed/unsigned
+C:\git 3\7.0-Rogue-Like\7.0 RogueLike\7.0 RogueLike\map.cpp(33,21): warning C4018:  '<' : incompatibilité signed/unsigned
+  7.0 RogueLike.vcxproj -> C:\git 3\7.0-Rogue-Like\7.0 RogueLike\Debug\7.0 RogueLike.exe
