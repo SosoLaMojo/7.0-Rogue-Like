@@ -1,6 +1,6 @@
 #include "map.h"
 #include <iostream>
-
+#include "GlobalRessources.h"
 
 Map::Map()
 {

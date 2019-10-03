@@ -8,8 +8,8 @@ public:
 	void Print();
 	
 private:
-	char walls_ = '#';
-	char rocks_ = '^';
+	/*char walls_ = '#';
+	char rocks_ = '^';*/
 	std::vector<std::vector<char> >map;
 	
 };

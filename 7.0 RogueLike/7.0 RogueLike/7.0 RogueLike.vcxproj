@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ennemy.h" />
+    <ClInclude Include="GlobalRessources.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="player.h" />
   </ItemGroup>
