@@ -2,11 +2,13 @@
 class Trap
 {
 public:
-	Trap();
+	
+	Trap(int attack, char sprite);
 	~Trap() {};
 
 private:
 
+	void Position();
 	
 };
 
