@@ -24,6 +24,9 @@ int main() {
 	Map map = Map();
 
 	map.Print();
+	player.AskUserInput();
+	player.MovePlayer();
+	map.Print();
 	
 	
 	//void ShowMap()

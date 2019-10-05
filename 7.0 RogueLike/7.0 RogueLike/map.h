@@ -1,16 +1,19 @@
 #pragma once
 #include<vector>
 
+
+
 class Map
 {
 public:
 	Map();
 	void Print();
-	
-private:
-	/*char walls_ = '#';
-	char rocks_ = '^';*/
+	void CheckObject();
 	std::vector<std::vector<char> >map;
-	
+	bool isObstacle = false;
+	bool isEnnemy = false;
+	bool isPotion = false;
+	bool isTrap = false;
+private:
 };
 

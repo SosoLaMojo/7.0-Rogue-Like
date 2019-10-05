@@ -1,4 +1,5 @@
 ﻿  map.cpp
   player.cpp
   Génération de code en cours...
-  7.0 RogueLike.vcxproj -> C:\git 3\7.0-Rogue-Like\7.0 RogueLike\x64\Debug\7.0 RogueLike.exe
+player.obj : error LNK2005: "struct Ressource ressources" (?ressources@@3URessource@@A) déjà défini(e) dans map.obj
+C:\git 3\7.0-Rogue-Like\7.0 RogueLike\x64\Debug\7.0 RogueLike.exe : fatal error LNK1169: un ou plusieurs symboles définis à différentes reprises ont été rencontrés

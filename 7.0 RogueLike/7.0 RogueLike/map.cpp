@@ -2,6 +2,8 @@
 #include <iostream>
 #include "GlobalRessources.h"
 
+Ressource ressources;
+
 Map::Map()
 {
 	map = std::vector<std::vector<char> >(20, std::vector<char>(70));
@@ -14,7 +16,7 @@ Map::Map()
 		}
 	}
 
-	const Ressource ressources;
+	
 	
 	for (int i = 0; i < 20; i++)
 	{
@@ -22,11 +24,13 @@ Map::Map()
 		map[i][0] = ressources.walls;
 
 	}
+
 	for (int i = 0; i < 70; i++)
 	{
 		map[0][i] = ressources.walls;
 		map[19][i] = ressources.walls;
 	}
+	map[ressources.yPlayerPosition][ressources.xPlayerPosition] = ressources.player;
 }
 
 void Map::Print()
@@ -42,5 +46,15 @@ void Map::Print()
 
 	}
 }
+
+void Map::CheckObject()
+{
+	if (map[ressources.xNewPlayerPosition][ressources.yNewPlayerPosition] == ressources.walls || map[ressources.xNewPlayerPosition][ressources.yNewPlayerPosition] == ressources.rocks)
+	{
+		isObstacle = true;
+	}
+}
+
+
 
 
