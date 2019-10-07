@@ -4,6 +4,9 @@
 #include "map.h"
 #include "potion.h"
 #include "trap.h"
+#include "GlobalRessources.h"
+#include <Windows.h>
+
 
 /* EXERCICE 7.0 ROGUE LIKE
 Créer un jeu dans le style roguelike.
@@ -22,16 +25,29 @@ N’oubliez pas de faire quelque chose de fun et amusez-vous en le faisant.
 
 int main() {
 
+	
+	
 	Player player = Player(100, '@');
 	Ennemy ennemy = Ennemy(100, '&');
 	Potion potion = Potion(20, '$');
 	Trap trap = Trap(30, '*');
-	Map map = Map();
+	Map map = Map(player.xPlayerPosition, player.yPlayerPosition);
 
-	map.Print();
-	player.AskUserInput();
-	player.MovePlayer();
-	map.Print();
+	
+	//map.Add(Ressource::player, player.xPlayerPosition, player.yPlayerPosition);
+	bool isRunning = true;
+	while (isRunning == true)
+	{
+		system("cls");
+		map.Print();
+		map.ShowMenu();
+		player.AskUserInput();
+		player.CheckMove(player.UserInputs);
+		map.UpdateMap(player.GetPlayerXposition(), player.GetPlayerYposition());
+		player.MovePosition(player.xNewPlayerPosition, player.yNewPlayerPosition);
+		map.Add(Ressource::player, player.xPlayerPosition, player.yPlayerPosition);
+		
+	}
 	
 	
 	//void ShowMap()

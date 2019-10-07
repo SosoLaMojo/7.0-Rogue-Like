@@ -6,14 +6,17 @@
 class Map
 {
 public:
-	Map();
+	Map(int playerPositionX, int PlayerPositionY);
 	void Print();
-	void CheckObject();
+	//void CheckObject(int playerPositionX, int PlayerPositionY);
 	std::vector<std::vector<char> >map;
 	bool isObstacle = false;
 	bool isEnnemy = false;
 	bool isPotion = false;
 	bool isTrap = false;
+	void Add(char objectImage,int objectPositionX, int objectPositionY);
+	void UpdateMap(int getPositionX, int getPositionY);
+	void ShowMenu();
 private:
 };
 

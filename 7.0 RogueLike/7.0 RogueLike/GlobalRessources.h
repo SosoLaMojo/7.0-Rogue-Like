@@ -2,12 +2,9 @@
 
 struct Ressource
 {
-	char walls = '#';
-	char rocks = '^';
-	char player = '@';
+	char walls = '°';
+	static const char rocks = '^';
+	static const char player = '@';
 	
-	int xPlayerPosition = 3;
-	int yPlayerPosition = 18;
-	int xNewPlayerPosition;
-	int yNewPlayerPosition;
+	
 };

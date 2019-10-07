@@ -3,8 +3,6 @@
 #include "GlobalRessources.h"
 #include <iostream>
 
-Map map;
-Ressource ressources;
 
 
 void Player::TakeDamage(const int attack)
@@ -22,66 +20,37 @@ void Player::PickUpObject()
 //	
 //}
 
-void Player::MovePlayer()
+
+
+void Player::MovePosition(int newplayerPositionX, int newplayerPositionY)
 {
-	map.isObstacle = false;
-	switch(UserInputs)
+	
+	xPlayerPosition = newplayerPositionX;
+	yPlayerPosition = newplayerPositionY;
+	
+}
+
+void Player::CheckMove(char userInput)
+{
+	switch(userInput)
 	{
 	case('w'):
-		ressources.yNewPlayerPosition = -1;
-		map.CheckObject();
-		if (map.isObstacle == true)
-		{
-			ressources.xPlayerPosition = ressources.xPlayerPosition;
-			ressources.yPlayerPosition = ressources.yPlayerPosition;
-		}
-		else
-		{
-			ressources.yPlayerPosition = ressources.yNewPlayerPosition;
-		}
+		yNewPlayerPosition = yPlayerPosition ;
+		xNewPlayerPosition = xPlayerPosition -1;
+		
 		break;
 	case('a'):
-		ressources.xNewPlayerPosition = -1;
-		map.CheckObject();
-		if (map.isObstacle == true)
-		{
-			ressources.xPlayerPosition = ressources.xPlayerPosition;
-			ressources.yPlayerPosition = ressources.yPlayerPosition;
-		}
-		else
-		{
-			ressources.xPlayerPosition = ressources.xNewPlayerPosition;
-		}
+		yNewPlayerPosition = yPlayerPosition -1;
+		xNewPlayerPosition = xPlayerPosition;
 		break;
 	case('s'):
-		ressources.yNewPlayerPosition = +1;
-		map.CheckObject();
-		if (map.isObstacle == true)
-		{
-			ressources.xPlayerPosition = ressources.xPlayerPosition;
-			ressources.yPlayerPosition = ressources.yPlayerPosition;
-		}
-		else
-		{
-			ressources.yPlayerPosition = ressources.yNewPlayerPosition;
-		}
+		yNewPlayerPosition = yPlayerPosition;
+		xNewPlayerPosition = xPlayerPosition + 1;
 		break;
 	case('d'):
-		ressources.xNewPlayerPosition = +1;
-		map.CheckObject();
-		if (map.isObstacle == true)
-		{
-			ressources.xPlayerPosition = ressources.xPlayerPosition;
-			ressources.yPlayerPosition = ressources.yPlayerPosition;
-		}
-		else
-		{
-			ressources.xPlayerPosition = ressources.xNewPlayerPosition;
-		}
-		break;
+		yNewPlayerPosition = yPlayerPosition +1;
+		xNewPlayerPosition = xPlayerPosition;
 	}
-	
-	
 }
 
 //void Player::CheckObject()
@@ -96,6 +65,16 @@ void Player::MovePlayer()
 void Player::AskUserInput()
 {
 	std::cin >> UserInputs;
+}
+
+int Player::GetPlayerXposition()
+{
+	return xPlayerPosition;
+}
+
+int Player::GetPlayerYposition()
+{
+	return yPlayerPosition;
 }
 
 Player::Player(const int health, char sprite)
