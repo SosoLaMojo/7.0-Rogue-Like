@@ -4,6 +4,7 @@
 #include "player.h"
 #include <windows.h>
 #include "potion.h"
+#include "trap.h"
 
 Ressource ressource;
 HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -36,6 +37,7 @@ Map::Map(int playerPositionX, int playerPositionY)
 	}
 	map[playerPositionX][playerPositionY] = ressource.player;
 	map[16][12] = Potion::potion;
+	map[8][14] = Trap::trap;
 }
 
 void Map::Print()

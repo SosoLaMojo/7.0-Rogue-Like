@@ -1,4 +1,5 @@
-﻿  potion.cpp
+﻿  main.cpp
+  map.cpp
   trap.cpp
   Génération de code en cours...
   7.0 RogueLike.vcxproj -> C:\Users\Solange\source\repos\SAE Institute\7.0 Exercice OOP\7.0-Rogue-Like\7.0 RogueLike\x64\Debug\7.0 RogueLike.exe

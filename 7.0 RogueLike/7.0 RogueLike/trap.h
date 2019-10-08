@@ -6,9 +6,9 @@ public:
 	Trap(int attack, char sprite);
 	~Trap() {};
 
-private:
+	static const char trap = 'X';
+	int attackTrap = 30;
 
-	void Position();
-	
+private:
 };
 
