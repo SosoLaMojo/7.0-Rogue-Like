@@ -82,6 +82,27 @@ void Map::ShowMenu()
 	
 }
 
+void Map::MoveSecurity(int playerNewPositionx, int playerNewPositionY)
+{
+	if(map[playerNewPositionx][playerNewPositionY]=='°')
+	{
+		isObstacle = true;
+	}
+	if(map[playerNewPositionx][playerNewPositionY]=='&')
+	{
+		isEnnemy = true;
+	}
+	if (map[playerNewPositionx][playerNewPositionY] == '¢')
+	{
+		isPotion = true;
+	}
+	if (map[playerNewPositionx][playerNewPositionY] == '¢')
+	{
+		isTrap = true;
+	}
+
+}
+
 
 
 

@@ -17,6 +17,7 @@ public:
 	void Add(char objectImage,int objectPositionX, int objectPositionY);
 	void UpdateMap(int getPositionX, int getPositionY);
 	void ShowMenu();
+	void MoveSecurity(int playerNewPositionx, int playerNewPositionY);
 private:
 };
 

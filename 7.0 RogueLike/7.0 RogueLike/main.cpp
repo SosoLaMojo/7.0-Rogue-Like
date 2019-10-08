@@ -38,13 +38,19 @@ int main() {
 	bool isRunning = true;
 	while (isRunning == true)
 	{
+		map.isObstacle = false;
+		map.isEnnemy = false;
+		map.isPotion = false;
+		map.isTrap = false;
+		
 		system("cls");
 		map.Print();
 		map.ShowMenu();
 		player.AskUserInput();
 		player.CheckMove(player.UserInputs);
+		map.MoveSecurity(player.xNewPlayerPosition, player.yNewPlayerPosition);
 		map.UpdateMap(player.GetPlayerXposition(), player.GetPlayerYposition());
-		player.MovePosition(player.xNewPlayerPosition, player.yNewPlayerPosition);
+		player.MovePosition(player.xNewPlayerPosition, player.yNewPlayerPosition, map.isObstacle, map.isEnnemy, map.isPotion, map.isTrap);
 		map.Add(Ressource::player, player.xPlayerPosition, player.yPlayerPosition);
 		
 	}

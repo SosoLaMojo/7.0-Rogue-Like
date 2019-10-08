@@ -8,7 +8,7 @@ public:
 	void TakeDamage(int attack);
 	void PickUpObject();
 	/*void Position();*/
-	void MovePosition(int playerPositionX, int playerPositionY);
+	void MovePosition(int playerPositionX, int playerPositionY, bool isObstacle, bool isEnnemy, bool isPotion, bool isTrap);
 	void CheckMove(char userInput);
 	void AskUserInput();
 	int GetPlayerXposition();

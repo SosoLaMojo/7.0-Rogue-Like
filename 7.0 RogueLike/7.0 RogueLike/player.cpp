@@ -22,12 +22,41 @@ void Player::PickUpObject()
 
 
 
-void Player::MovePosition(int newplayerPositionX, int newplayerPositionY)
+void Player::MovePosition(int newplayerPositionX, int newplayerPositionY, bool isObstacle, bool isEnnemy, bool isPotion, bool isTrap)
 {
-	
-	xPlayerPosition = newplayerPositionX;
-	yPlayerPosition = newplayerPositionY;
-	
+	if(isObstacle== true)
+	{
+		xPlayerPosition = xPlayerPosition;
+		yPlayerPosition = yPlayerPosition;
+		return;
+	}
+	if(isEnnemy == true)
+	{
+		xPlayerPosition = newplayerPositionX;
+		yPlayerPosition = newplayerPositionY;
+		//ajouter prise de degats
+		return;
+	}
+	if(isPotion == true)
+	{
+		xPlayerPosition = newplayerPositionX;
+		yPlayerPosition = newplayerPositionY;
+		//ajouter option de recuperer
+		return;
+	}
+	if(isTrap == true)
+	{
+		xPlayerPosition = newplayerPositionX;
+		yPlayerPosition = newplayerPositionY;
+		//ajouter prise de degats
+		return;
+	}
+	else
+	{
+		xPlayerPosition = newplayerPositionX;
+		yPlayerPosition = newplayerPositionY;
+		return;
+	}
 }
 
 void Player::CheckMove(char userInput)
@@ -37,6 +66,7 @@ void Player::CheckMove(char userInput)
 	case('w'):
 		yNewPlayerPosition = yPlayerPosition ;
 		xNewPlayerPosition = xPlayerPosition -1;
+		
 		
 		break;
 	case('a'):
