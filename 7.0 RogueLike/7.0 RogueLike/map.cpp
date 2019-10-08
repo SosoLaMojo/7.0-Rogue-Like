@@ -3,6 +3,7 @@
 #include "GlobalRessources.h"
 #include "player.h"
 #include <windows.h>
+#include "potion.h"
 
 Ressource ressource;
 HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -34,6 +35,7 @@ Map::Map(int playerPositionX, int playerPositionY)
 		map[19][i] = ressource.walls;
 	}
 	map[playerPositionX][playerPositionY] = ressource.player;
+	map[16][12] = Potion::potion;
 }
 
 void Map::Print()

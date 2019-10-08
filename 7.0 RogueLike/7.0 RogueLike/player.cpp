@@ -22,7 +22,7 @@ void Player::PickUpObject()
 
 
 
-void Player::MovePosition(int newplayerPositionX, int newplayerPositionY, bool isObstacle, bool isEnnemy, bool isPotion, bool isTrap)
+void Player::MovePosition(int newplayerPositionX, int newplayerPositionY, bool isObstacle, bool isEnnemy, bool isPotion, bool isTrap, int potionHealth)
 {
 	if(isObstacle== true)
 	{
@@ -42,6 +42,7 @@ void Player::MovePosition(int newplayerPositionX, int newplayerPositionY, bool i
 		xPlayerPosition = newplayerPositionX;
 		yPlayerPosition = newplayerPositionY;
 		//ajouter option de recuperer
+		takeHealth(potionHealth);
 		return;
 	}
 	if(isTrap == true)
@@ -107,6 +108,15 @@ int Player::GetPlayerYposition()
 	return yPlayerPosition;
 }
 
+void Player::takeHealth(int potionHealth)
+{
+
+	health_ += potionHealth;
+	
+}
+
 Player::Player(const int health, char sprite)
 {
 }
+
+

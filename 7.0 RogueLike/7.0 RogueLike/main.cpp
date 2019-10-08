@@ -50,7 +50,7 @@ int main() {
 		player.CheckMove(player.UserInputs);
 		map.MoveSecurity(player.xNewPlayerPosition, player.yNewPlayerPosition);
 		map.UpdateMap(player.GetPlayerXposition(), player.GetPlayerYposition());
-		player.MovePosition(player.xNewPlayerPosition, player.yNewPlayerPosition, map.isObstacle, map.isEnnemy, map.isPotion, map.isTrap);
+		player.MovePosition(player.xNewPlayerPosition, player.yNewPlayerPosition, map.isObstacle, map.isEnnemy, map.isPotion, map.isTrap, potion.potionVie);
 		map.Add(Ressource::player, player.xPlayerPosition, player.yPlayerPosition);
 		
 	}
